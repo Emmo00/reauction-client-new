@@ -244,61 +244,63 @@ export default function NFTDetailsPage({ params }: { params: Promise<{ id: strin
 
       {/* Place Bid Modal */}
       {showBidModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-50 flex items-center justify-center sm:p-4 p-0 animate-in fade-in duration-200">
           <div
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={() => setShowBidModal(false)}
           />
-          <div className="relative bg-background border border-primary/50 rounded-lg p-8 max-w-md w-full transform animate-in zoom-in-95 duration-300 shadow-2xl">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Place Your Bid</h2>
+          <div className="relative bg-background border border-primary/50 sm:rounded-lg rounded-none p-8 max-w-md w-full h-full sm:h-auto sm:min-h-[580px] flex flex-col justify-between transform animate-in zoom-in-95 duration-300 shadow-2xl">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-6">Place Your Bid</h2>
 
-            <div className="mb-6 space-y-3 max-h-40 overflow-y-auto">
-              <p className="text-sm font-semibold text-primary mb-3">Recent Bids</p>
-              {mockBids.map((bid, idx) => (
-                <div
-                  key={idx}
-                  className={`p-3 rounded border transition-all duration-200 ${
-                    idx === 0
-                      ? 'border-primary/50 bg-primary/10'
-                      : 'border-border/50 bg-card/40'
-                  }`}
-                >
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <p className="font-semibold text-foreground">{bid.amount} ETH</p>
-                      <p className="text-xs text-muted-foreground">{bid.bidder}</p>
+              <div className="mb-6 space-y-3 sm:max-h-64 max-h-48 overflow-y-auto">
+                <p className="text-sm font-semibold text-primary mb-3">Recent Bids</p>
+                {mockBids.map((bid, idx) => (
+                  <div
+                    key={idx}
+                    className={`p-3 rounded border transition-all duration-200 ${
+                      idx === 0
+                        ? 'border-primary/50 bg-primary/10'
+                        : 'border-border/50 bg-card/40'
+                    }`}
+                  >
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="font-semibold text-foreground">{bid.amount} ETH</p>
+                        <p className="text-xs text-muted-foreground">{bid.bidder}</p>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{bid.time}</p>
                     </div>
-                    <p className="text-xs text-muted-foreground">{bid.time}</p>
+                    {idx === 0 && <p className="text-xs text-primary mt-2 font-semibold">HIGHEST BID</p>}
                   </div>
-                  {idx === 0 && <p className="text-xs text-primary mt-2 font-semibold">HIGHEST BID</p>}
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-4">
-              <div>
-                <label className="text-sm font-semibold text-foreground block mb-2">
-                  Your Bid (ETH)
-                </label>
-                <input
-                  type="number"
-                  value={bidAmount}
-                  onChange={(e) => {
-                    setBidAmount(e.target.value);
-                    setBidError('');
-                  }}
-                  placeholder={`Minimum: ${(parseFloat(nft.currentPrice) * 1.05).toFixed(2)} ETH`}
-                  className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
-                />
+                ))}
               </div>
 
-              {bidError && (
-                <p className="text-sm text-red-500 animate-in fade-in duration-200">{bidError}</p>
-              )}
+              <div className="space-y-4">
+                <div>
+                  <label className="text-sm font-semibold text-foreground block mb-2">
+                    Your Bid (ETH)
+                  </label>
+                  <input
+                    type="number"
+                    value={bidAmount}
+                    onChange={(e) => {
+                      setBidAmount(e.target.value);
+                      setBidError('');
+                    }}
+                    placeholder={`Minimum: ${(parseFloat(nft.currentPrice) * 1.05).toFixed(2)} ETH`}
+                    className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
+                  />
+                </div>
 
-              <p className="text-xs text-muted-foreground">
-                Minimum increase: 5% ({(parseFloat(nft.currentPrice) * 1.05).toFixed(2)} ETH)
-              </p>
+                {bidError && (
+                  <p className="text-sm text-red-500 animate-in fade-in duration-200">{bidError}</p>
+                )}
+
+                <p className="text-xs text-muted-foreground">
+                  Minimum increase: 5% ({(parseFloat(nft.currentPrice) * 1.05).toFixed(2)} ETH)
+                </p>
+              </div>
             </div>
 
             <div className="flex gap-3 mt-8">
