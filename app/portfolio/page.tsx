@@ -104,7 +104,7 @@ export default function Portfolio() {
   }, []);
 
   const forSaleItems = mockPortfolioData.holdings.filter(item => item.upForSale);
-  const totalValue = mockPortfolioData.holdings.reduce((sum, item) => sum + parseFloat(item.value), 0);
+  const totalValueSold = mockPortfolioData.holdings.reduce((sum, item) => sum + parseFloat(item.value), 0);
 
   return (
     <div className="min-h-screen bg-background">
@@ -147,7 +147,7 @@ export default function Portfolio() {
 
       {/* Portfolio Stats */}
       <section className="relative z-10 border-b border-border/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="space-y-4 animate-in fade-in duration-500">
             <h1 className="text-4xl font-bold text-foreground">My Portfolio</h1>
             <p className="text-muted-foreground">Manage your NFT collection</p>
@@ -159,19 +159,15 @@ export default function Portfolio() {
               <p className="text-3xl font-bold text-primary">{mockPortfolioData.holdings.length}</p>
             </div>
             <div className="p-6 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm animate-in fade-in duration-500 delay-200">
-              <p className="text-sm text-muted-foreground mb-2">Total Value</p>
-              <p className="text-3xl font-bold text-primary">{totalValue.toFixed(1)} ETH</p>
-            </div>
-            <div className="p-6 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm animate-in fade-in duration-500 delay-300">
-              <p className="text-sm text-muted-foreground mb-2">For Sale</p>
-              <p className="text-3xl font-bold text-primary">{forSaleItems.length}</p>
+              <p className="text-sm text-muted-foreground mb-2">Total Value Sold</p>
+              <p className="text-3xl font-bold text-primary">{totalValueSold.toFixed(1)} ETH</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="relative z-10 py-12">
+      <section className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Tabs */}
           <div className="flex gap-4 border-b border-border/50 mb-8">
