@@ -48,7 +48,9 @@ const mockBids = [
   { bidder: '0xaaaa...bbbb', amount: 12.5, time: '2 min ago' },
   { bidder: '0xcccc...dddd', amount: 12.0, time: '15 min ago' },
   { bidder: '0xeeee...ffff', amount: 11.5, time: '1h ago' },
-  { bidder: '0x1111...2222', amount: 11.0, time: '2h ago' }
+  { bidder: '0x1111...2222', amount: 11.0, time: '2h ago' },
+  { bidder: '0x2222...3333', amount: 10.5, time: '4h ago' },
+  { bidder: '0x3333...4444', amount: 10.0, time: '6h ago' }
 ];
 
 export default function NFTDetailsPage({ params }: { params: Promise<{ id: string }> }) {
@@ -253,12 +255,12 @@ export default function NFTDetailsPage({ params }: { params: Promise<{ id: strin
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">Place Your Bid</h2>
 
-              <div className="mb-6 space-y-3 sm:max-h-64 max-h-48 overflow-y-auto">
-                <p className="text-sm font-semibold text-primary mb-3">Recent Bids</p>
+              <p className="text-sm font-semibold text-primary mb-3">Recent Bids</p>
+              <div className="mb-6 space-y-3 h-[305px] overflow-y-auto pr-1">
                 {mockBids.map((bid, idx) => (
                   <div
                     key={idx}
-                    className={`p-3 rounded border transition-all duration-200 ${
+                    className={`p-3 rounded border h-[74px] flex flex-col justify-between transition-all duration-200 ${
                       idx === 0
                         ? 'border-primary/50 bg-primary/10'
                         : 'border-border/50 bg-card/40'
@@ -271,7 +273,7 @@ export default function NFTDetailsPage({ params }: { params: Promise<{ id: strin
                       </div>
                       <p className="text-xs text-muted-foreground">{bid.time}</p>
                     </div>
-                    {idx === 0 && <p className="text-xs text-primary mt-2 font-semibold">HIGHEST BID</p>}
+                    {idx === 0 && <p className="text-xs text-primary mt-1 font-semibold leading-none">HIGHEST BID</p>}
                   </div>
                 ))}
               </div>
