@@ -27,7 +27,6 @@ The Reauction NFT Marketplace has been successfully designed and implemented as 
 | Route | Purpose | Features |
 |-------|---------|----------|
 | `/` | Landing page | Hero with FaultyTerminal, marketplace preview |
-| `/marketplace` | Browse marketplace | Filtering, sorting, search, tab navigation |
 | `/marketplace/:id` (NFT Detail) | NFT details | Bid history, analytics, purchase interface |
 | `/portfolio` | User portfolio | Holdings, listings, activity timeline |
 | `/portfolio/activity` (Integrated) | Activity tracking | Transaction history with timestamps |
@@ -93,7 +92,6 @@ State Management (Zustand Ready)
 
 ### Pages (5)
 - `app/page.tsx` - Landing page (182 lines)
-- `app/marketplace/page.tsx` - Marketplace (250 lines)
 - `app/nft/[id]/page.tsx` - NFT details (256 lines)
 - `app/portfolio/page.tsx` - Portfolio (238 lines)
 
@@ -239,7 +237,6 @@ pnpm dev
 
 ### Exploration
 1. **Landing Page** (`/`) - See FaultyTerminal hero effect
-2. **Marketplace** (`/marketplace`) - Browse NFT listings
 3. **NFT Detail** (`/marketplace/[id]`) - View full details
 4. **Portfolio** (`/portfolio`) - Explore user dashboard
 

@@ -35,33 +35,6 @@ Reauction NFT Marketplace
     │       ├── Tabs (All, Auction, Fixed-Price)
     │       └── Listing grid (6 mock NFTs with cards)
     │
-    ├── 📊 MARKETPLACE PAGE (app/marketplace/page.tsx)
-    │   │
-    │   ├── Header Component
-    │   │
-    │   ├── 🖥️ FAULTY TERMINAL LAYER (z-0, fixed)
-    │   │   ├── Full viewport coverage
-    │   │   ├── Cyan tint (#00d9ff)
-    │   │   ├── Subtle glitch: 0.4
-    │   │   ├── Subtle flicker: 0.2
-    │   │   ├── Brightness: 0.3
-    │   │   └── pointer-events-none (doesn't block interactions)
-    │   │
-    │   └── Main Content (z-10, relative)
-    │       ├── Page header ("Marketplace")
-    │       ├── Search bar with icon
-    │       ├── Filter/Sort buttons
-    │       ├── Tab navigation (All, Auctions, Fixed-Price)
-    │       └── NFT Grid (responsive)
-    │           ├── Mobile: 1 column
-    │           ├── Tablet: 2 columns
-    │           └── Desktop: 3+ columns
-    │               └── Each card includes:
-    │                   ├── NFT image
-    │                   ├── Title & Collection
-    │                   ├── Sale type badge
-    │                   ├── Price in ETH
-    │                   └── [View] button
     │
     ├── 🖼️ NFT DETAIL PAGE (app/nft/[id]/page.tsx)
     │   │

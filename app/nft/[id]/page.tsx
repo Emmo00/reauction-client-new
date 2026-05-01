@@ -133,7 +133,7 @@ export default function NFTDetailsPage({ params }: { params: Promise<{ id: strin
       <header className="relative z-10 border-b border-border/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
           <button
-            onClick={() => router.push('/marketplace')}
+            onClick={() => router.push('/')}
             className="text-2xl font-bold text-primary hover:text-primary-light transition-colors"
           >
             reauction

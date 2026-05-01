@@ -34,35 +34,6 @@ The FaultyTerminal component has been strategically integrated throughout the Re
 
 ---
 
-## 2. Marketplace Feed (`/app/marketplace/page.tsx`)
-
-### Configuration:
-```tsx
-<FaultyTerminal
-  scale={1.5}
-  gridMul={[2, 1]}
-  digitSize={1}
-  timeScale={0.5}
-  scanlineIntensity={0.1}
-  glitchAmount={0.4}
-  flickerAmount={0.2}
-  noiseAmp={0.2}
-  tint="#00d9ff"        // Cyan neon color
-  mouseReact={false}    // Static animation
-  pageLoadAnimation={false}
-  brightness={0.3}
-/>
-```
-
-### Placement:
-- **Fixed background** covering entire marketplace viewport
-- **Z-index structure**: Terminal at z-0 (fixed), content at z-10 (relative)
-- **pointer-events-none**: Prevents terminal from interfering with interactions
-- **Subtle effect**: Lower glitch (0.4) and flicker (0.2) to avoid overwhelming listings
-- **Brightness**: 0.3 for subtle atmospheric background
-
----
-
 ## 3. Portfolio Page (`/app/portfolio/page.tsx`)
 
 ### Configuration:
