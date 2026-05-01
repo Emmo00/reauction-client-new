@@ -111,24 +111,33 @@ export default function NFTDetailsPage({ params }: { params: Promise<{ id: strin
 
   return (
     <div className="min-h-screen bg-background">
-      {mounted && (
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-20">
-          <FaultyTerminal
-            scale={1.5}
-            gridMul={[2, 1]}
-            digitSize={1}
-            timeScale={0.3}
-            scanlineIntensity={0.1}
-            glitchAmount={0.2}
-            flickerAmount={0.1}
-            noiseAmp={0.1}
-            tint="#8b5cf6"
-            mouseReact={false}
-            pageLoadAnimation={false}
-            brightness={0.3}
-          />
-        </div>
-      )}
+      <div className="absolute inset-0">
+        {mounted && (
+          <div className="relative h-full w-full opacity-25 pointer-events-none">
+            <FaultyTerminal
+              className=""
+              style={{}}
+              scale={1}
+              gridMul={[2, 1]}
+              digitSize={2}
+              timeScale={1}
+              pause={false}
+              scanlineIntensity={1}
+              glitchAmount={1}
+              flickerAmount={1}
+              noiseAmp={1}
+              chromaticAberration={0}
+              dither={0}
+              curvature={0}
+              tint="#8b5cf6"
+              mouseReact={true}
+              mouseStrength={0.5}
+              pageLoadAnimation={false}
+              brightness={0.4}
+            />
+          </div>
+        )}
+      </div>
 
       <header className="relative z-10 border-b border-border/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
@@ -260,11 +269,10 @@ export default function NFTDetailsPage({ params }: { params: Promise<{ id: strin
                 {mockBids.map((bid, idx) => (
                   <div
                     key={idx}
-                    className={`p-3 rounded border h-[74px] flex flex-col justify-between transition-all duration-200 ${
-                      idx === 0
+                    className={`p-3 rounded border h-[74px] flex flex-col justify-between transition-all duration-200 ${idx === 0
                         ? 'border-primary/50 bg-primary/10'
                         : 'border-border/50 bg-card/40'
-                    }`}
+                      }`}
                   >
                     <div className="flex justify-between items-start">
                       <div>

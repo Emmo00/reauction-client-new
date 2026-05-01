@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { X, Clock, Zap, TrendingUp } from 'lucide-react';
-import FaultyTerminal from './FaultyTerminal';
 
 interface AuctionModalProps {
   isOpen: boolean;
@@ -29,25 +28,6 @@ export function AuctionModal({ isOpen, onClose, nft }: AuctionModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop with terminal effect */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-0">
-        <div className="absolute inset-0 opacity-20">
-          <FaultyTerminal
-            scale={2}
-            gridMul={[3, 2]}
-            digitSize={1.5}
-            timeScale={0.3}
-            scanlineIntensity={0.15}
-            glitchAmount={0.6}
-            flickerAmount={0.3}
-            noiseAmp={0.2}
-            tint="#00d9ff"
-            mouseReact={false}
-            pageLoadAnimation={false}
-            brightness={0.4}
-          />
-        </div>
-      </div>
 
       {/* Modal Content */}
       <div className="relative z-10 bg-card border border-primary/40 rounded-sm max-w-2xl w-full max-h-[90vh] overflow-y-auto terminal-glow">
@@ -127,7 +107,7 @@ export function AuctionModal({ isOpen, onClose, nft }: AuctionModalProps) {
           {/* Bidding Section */}
           <div className="space-y-4 pt-4 border-t border-border">
             <h3 className="font-terminal font-semibold text-foreground">Place Your Bid</h3>
-            
+
             <div className="flex gap-3">
               <input
                 type="number"

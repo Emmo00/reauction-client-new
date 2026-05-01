@@ -108,24 +108,34 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background">
-      {mounted && (
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-25">
-          <FaultyTerminal
-            scale={1.5}
-            gridMul={[2, 1]}
-            digitSize={1}
-            timeScale={0.3}
-            scanlineIntensity={0.1}
-            glitchAmount={0.2}
-            flickerAmount={0.1}
-            noiseAmp={0.1}
-            tint="#8b5cf6"
-            mouseReact={false}
-            pageLoadAnimation={false}
-            brightness={0.3}
-          />
-        </div>
-      )}
+      <div className="absolute inset-0">
+        {mounted && (
+          <div className="relative h-full w-full opacity-25 pointer-events-none">
+            <FaultyTerminal
+              className=""
+              style={{}}
+              scale={1}
+              gridMul={[2, 1]}
+              digitSize={2}
+              timeScale={1}
+              pause={false}
+              scanlineIntensity={1}
+              glitchAmount={1}
+              flickerAmount={1}
+              noiseAmp={1}
+              chromaticAberration={0}
+              dither={0}
+              curvature={0}
+              tint="#8b5cf6"
+              mouseReact={true}
+              mouseStrength={0.5}
+              pageLoadAnimation={false}
+              brightness={0.9}
+            />
+          </div>
+        )}
+      </div>
+
 
       {/* Header */}
       <header className="relative z-10 border-b border-border/50 backdrop-blur-sm">
@@ -179,11 +189,10 @@ export default function Portfolio() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`px-4 py-3 font-medium transition-all duration-200 ${
-                  activeTab === tab.id
+                className={`px-4 py-3 font-medium transition-all duration-200 ${activeTab === tab.id
                     ? 'text-primary border-b-2 border-primary'
                     : 'text-muted-foreground hover:text-foreground'
-                }`}
+                  }`}
               >
                 {tab.label}
               </button>
