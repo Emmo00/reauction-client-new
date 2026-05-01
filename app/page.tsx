@@ -153,20 +153,34 @@ export default function Marketplace() {
           >
             reauction
           </button>
-          <button
-            onClick={() => router.push('/')}
-            className="px-4 py-2 text-sm text-foreground/70 hover:text-foreground transition-colors"
+          <div
+            onClick={() => router.push('/portfolio')}
+            className="flex items-center gap-3 p-1.5 pr-4 rounded-full border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/70 transition-all duration-200 cursor-pointer select-none group"
           >
-            ← Back to Home
-          </button>
+            <div className="relative w-9 h-9 rounded-full overflow-hidden border border-border/50 group-hover:border-primary/50 transition-colors duration-200">
+              <img
+                src="https://picsum.photos/id/64/40/40"
+                alt="Profile"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors duration-200">
+                alice_farcaster
+              </span>
+              <span className="text-xs text-muted-foreground font-mono">
+                0x8b...a79c
+              </span>
+            </div>
+          </div>
         </div>
       </header>
 
       {/* Page Header */}
       <section className="relative z-10 border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Marketplace</h1>
-          <p className="text-muted-foreground">Discover and trade NFT collectibles across auctions and fixed-price sales</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">Resell and Auction Your Cast Collectibles</h1>
+          <p className="text-muted-foreground">Give your collectibles a second life.</p>
         </div>
       </section>
 

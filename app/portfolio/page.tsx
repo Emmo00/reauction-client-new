@@ -137,10 +137,10 @@ export default function Portfolio() {
             reauction
           </button>
           <button
-            onClick={() => router.push('/marketplace')}
+            onClick={() => router.push('/')}
             className="px-4 py-2 text-sm text-foreground/70 hover:text-foreground transition-colors"
           >
-            Back to Marketplace
+            ← Back
           </button>
         </div>
       </header>
