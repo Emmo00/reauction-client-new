@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
 import FaultyTerminal from '@/components/FaultyTerminal';
 
@@ -51,7 +51,8 @@ const mockBids = [
   { bidder: '0x1111...2222', amount: 11.0, time: '2h ago' }
 ];
 
-export default function NFTDetailsPage({ params }: { params: { id: string } }) {
+export default function NFTDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [showBidModal, setShowBidModal] = useState(false);
@@ -61,7 +62,7 @@ export default function NFTDetailsPage({ params }: { params: { id: string } }) {
   const [bidError, setBidError] = useState('');
   const [transactionType, setTransactionType] = useState<'bid' | 'buy'>('bid');
 
-  const nft = mockNFTData[params.id] || mockNFTData['1'];
+  const nft = mockNFTData[id] || mockNFTData['1'];
 
   useEffect(() => {
     setMounted(true);
