@@ -201,7 +201,7 @@ export default function Marketplace() {
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="text"
-                placeholder="Search NFTs..."
+                placeholder="Search Casts..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="flex-1 px-4 py-2 bg-card border border-border rounded text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
@@ -312,7 +312,7 @@ export default function Marketplace() {
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8">
             <div>
               <p className="font-bold text-primary text-lg">reauction</p>
-              <p className="text-sm text-muted-foreground mt-1">NFT Marketplace on Farcaster</p>
+              <p className="text-sm text-muted-foreground mt-1">Collectibles Marketplace on Farcaster</p>
             </div>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Docs</a>

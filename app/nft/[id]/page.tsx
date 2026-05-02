@@ -340,7 +340,7 @@ export default function NFTDetailsPage({ params }: { params: Promise<{ id: strin
           />
           <div className="relative bg-background border border-primary/50 rounded-lg p-8 max-w-md w-full transform animate-in zoom-in-95 duration-300 shadow-2xl">
             <h2 className="text-2xl font-bold text-foreground mb-4">Confirm Purchase</h2>
-            <p className="text-muted-foreground mb-6">Are you sure you want to buy this NFT?</p>
+            <p className="text-muted-foreground mb-6">Are you sure you want to buy this Cast?</p>
 
             <div className="p-4 rounded-lg border border-border/50 bg-card/40 mb-6 space-y-2">
               <p className="font-semibold text-foreground">{nft.title}</p>

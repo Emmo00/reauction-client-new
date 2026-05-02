@@ -172,7 +172,7 @@ export function PurchaseModal({ isOpen, onClose, nft }: PurchaseModalProps) {
                   onClick={onClose}
                   className="w-full px-4 py-3 bg-primary text-primary-foreground rounded-sm font-terminal font-semibold hover:bg-accent transition-colors border border-primary/30"
                 >
-                  View NFT
+                  View Collectible
                 </button>
                 <button
                   onClick={onClose}

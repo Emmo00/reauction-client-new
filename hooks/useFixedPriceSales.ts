@@ -124,7 +124,7 @@ export function useFixedPriceSales() {
       setListings(prev => [newListing, ...prev]);
       return newListing;
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to list NFT');
+      setError(err instanceof Error ? err.message : 'Failed to list Collectibles');
       throw err;
     } finally {
       setLoading(false);
