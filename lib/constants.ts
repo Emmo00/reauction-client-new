@@ -1,5 +1,12 @@
 import { type AccountAssociation } from "@farcaster/miniapp-core/src/manifest";
 
+// --- Launch Configuration ---
+/**
+ * Show prelaunch/waitlist page instead of marketplace
+ * Set via NEXT_PUBLIC_PRE_LAUNCH environment variable
+ */
+export const PRE_LAUNCH = process.env.NEXT_PUBLIC_PRE_LAUNCH === "true";
+
 // --- App Configuration ---
 export const APP_NAME = "Reauction";
 export const APP_DESCRIPTION = "Resell Farcaster Collectible Casts";

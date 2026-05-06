@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Marketplace from '@/components/Marketplace';
-import { APP_NAME, APP_DESCRIPTION } from '@/lib/constants';
+import PrelaunchPage from '@/components/PrelaunchPage';
+import { APP_NAME, APP_DESCRIPTION, PRE_LAUNCH } from '@/lib/constants';
 import { getMiniAppEmbedMetadata } from '@/lib/utils';
 
 export const revalidate = 300;
@@ -24,5 +25,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Home() {
+  if (PRE_LAUNCH) {
+    return <PrelaunchPage />;
+  }
+  
   return <Marketplace />;
 }

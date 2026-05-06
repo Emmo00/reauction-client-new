@@ -54,7 +54,7 @@ export function getMiniAppEmbedMetadata(ogImageUrl?: string) {
  */
 export async function getFarcasterDomainManifest(): Promise<Manifest> {
   return {
-    accountAssociation: APP_ACCOUNT_ASSOCIATION,
+    ...(APP_ACCOUNT_ASSOCIATION && { accountAssociation: APP_ACCOUNT_ASSOCIATION }),
     miniapp: {
       version: "1",
       name: APP_NAME,
