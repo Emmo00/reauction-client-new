@@ -7,6 +7,9 @@ import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_
 export const metadata: Metadata = {
   title: APP_NAME,
   description: APP_DESCRIPTION,
+  other: {
+    'talentapp:project_verification': 'f852c861ff5f9c44a22268c45813a514f4b3ed243e578c56b594a423cc1012b5e3f43f2eccd49535c4829c9e04a2076d8de35531c0bfbe3793359324013cf9cf',
+  },
 };
 
 // Initialize fonts with fallbacks
