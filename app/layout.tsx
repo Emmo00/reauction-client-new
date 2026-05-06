@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import '@/app/globals.css';
 import { APP_NAME, APP_DESCRIPTION } from '@/lib/constants';
+import { Providers } from '@/components/providers';
 import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 export const metadata: Metadata = {
@@ -40,7 +41,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${_geist.className} ${_geistMono.className}`}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
