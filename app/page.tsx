@@ -315,9 +315,9 @@ export default function Marketplace() {
               <p className="text-sm text-muted-foreground mt-1">Collectibles Marketplace on Farcaster</p>
             </div>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Docs</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Discord</a>
+              <a href="/docs" className="text-muted-foreground hover:text-primary transition-colors">Docs</a>
+              <a href="https://x.com/reauctionxyz" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a>
+              <a href="https://farcaster.xyz/~/channel/reauction" className="text-muted-foreground hover:text-primary transition-colors">Farcaster</a>
             </div>
           </div>
         </div>
