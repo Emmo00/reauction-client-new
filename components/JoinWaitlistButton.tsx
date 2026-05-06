@@ -28,7 +28,7 @@ export default function JoinWaitlistButton({
 
     // Check if user is in miniapp, if not open it
     if (!(await isInMiniApp())) {
-      window.open("https://reauction.xyz", "_blank");
+      window.open("https://farcaster.xyz/miniapps/lsmeGFwc2SiN/reauction", "_self");
       setIsLoading(false);
       return;
     }
