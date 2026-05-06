@@ -5,8 +5,6 @@ import FaultyTerminal from '@/components/FaultyTerminal';
 import JoinWaitlistButton from '@/components/JoinWaitlistButton';
 import JoinWaitlistSuccess from '@/components/JoinWaitlistSuccess';
 import JoinWaitlistFailed from '@/components/JoinWaitlistFailed';
-import { Button } from '@/components/ui/button';
-import { ChevronRight } from 'lucide-react';
 
 export default function PrelaunchPage() {
   const [joinWaitlistSuccess, setJoinWaitlistSuccess] = useState(false);
@@ -56,7 +54,7 @@ export default function PrelaunchPage() {
             chromaticAberration={0}
             dither={0}
             curvature={0}
-            tint="#ae3bb0"
+            tint="#8b5cf6"
             mouseReact={true}
             mouseStrength={0.5}
             pageLoadAnimation={false}

@@ -69,7 +69,7 @@ export default function JoinWaitlistButton({
   return (
     <Button
       size="lg"
-      className="h-12 rounded-full px-8 text-base font-semibold"
+      className="h-12 rounded-full bg-accent px-8 text-base font-semibold"
       onClick={handleJoinWaitlist}
       disabled={isLoading}
     >
