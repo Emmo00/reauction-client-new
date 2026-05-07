@@ -319,8 +319,8 @@ export default function Marketplace() {
             </div>
             <div className="flex gap-6 text-sm">
               <a href="/docs" className="text-muted-foreground hover:text-primary transition-colors">Docs</a>
-              <a href="https://x.com/reauctionxyz" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a>
               <a href="https://farcaster.xyz/~/channel/reauction" className="text-muted-foreground hover:text-primary transition-colors">Farcaster</a>
+              <a href="https://x.com/reauctionxyz" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a>
             </div>
           </div>
         </div>
