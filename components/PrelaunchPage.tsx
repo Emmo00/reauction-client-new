@@ -64,20 +64,18 @@ export default function PrelaunchPage() {
       </div>
 
       {/* Content */}
-      <div className="relative flex min-h-screen flex-col items-center justify-center px-4">
+      <div className="relative flex min-h-screen flex-col items-center justify-center px-2">
         <div className="absolute bottom-12 left-4 space-y-4 sm:left-8">
-          <h1 className="text-balance font-sans text-5xl font-bold leading-tight tracking-tight text-white">
+          <h1 className="text-balance font-sans text-3xl md:text-5xl font-bold leading-tight tracking-tight text-white">
             Resell and Auction
-            <br /> Your Cast
-            <br />
-            Collectibles
+            <br /> Your Cast Collectibles
           </h1>
 
-          <p className="text-pretty font-sans leading-relaxed text-gray-200 max-w-lg">
+          <p className="text-pretty font-sans leading-relaxed text-[12px] md:text-[18px] text-gray-200 max-w-lg">
             Give your collectibles a second life. Earn by reselling or auctioning your Farcaster NFTs.
           </p>
 
-          <div className="pt-4">
+          <div className="">
             <JoinWaitlistButton
               setJoinWaitlistSuccess={() => setJoinWaitlistSuccess(true)}
               setJoinWaitlistFailed={handleJoinWaitlistFailed}
